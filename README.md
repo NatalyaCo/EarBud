@@ -1,0 +1,2 @@
+# EarBud
+Second Team Project 
