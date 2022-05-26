@@ -12,7 +12,10 @@ Preference.init(
         primaryKey: true,
         autoIncrement: true,
       },
-
+    about_me:{
+        type: DataTypes.STRING,
+        allowNull: false,
+    },  
     fave_genre: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,9 +25,14 @@ Preference.init(
       allowNull: false,
     },
     fave_song: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
+    friend_wish: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -5,20 +5,18 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
+      <a href="/preference/{{preference.id}}">{{fave_genre}}</a>
     </h2>
     <p>
-      <span for="img" aria-label="money">💲</span>
+      {{!-- <span for="img" aria-label="money">💲</span> --}}
       <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
+      <span class="col-md-7">{{preference.about_me}}</span>
+      
     </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+    <p>My favorite song is {{preference.fave_song}} and my favorite artist is {{preference.{fave_artist}}</p>
   </div>
   <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
+    <p> I would like to find people who {{preference.friend_wish}} and chat about music we like</p>
   </div>
 </div>
 {{/each}}
