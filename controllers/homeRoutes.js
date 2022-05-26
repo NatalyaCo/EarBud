@@ -1,9 +1,17 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Preference, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
+    const preferenceData = await Preference.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        }
+      ]
+    
 //     Need to show login/register options on landing page
   });
   } catch (err) {
