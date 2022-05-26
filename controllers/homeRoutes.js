@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
 //     Need to show login/register options on landing page
-    });
+  });
   } catch (err) {
     res.status(500).json(err);
   }
