@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Preference extends Model {}
 
-Project.init(
+Preference.init(
   {
     fave_genre: {
       type: DataTypes.STRING,
