@@ -28,22 +28,23 @@ User.init(
         isEmail: true,
       },
     },
-    password: {
+    spotifyUsername: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [8],
-      },
+    },
+    spotifyPassword: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.spotifyPassword = await bcrypt.hash(newUserData.spotifyPassword, 10);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        updatedUserData.spotifyPassword = await bcrypt.hash(updatedUserData.spotifyPassword, 10);
         return updatedUserData;
       }, 
       },
