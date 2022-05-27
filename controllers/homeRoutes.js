@@ -6,7 +6,9 @@ router.get('/', async (req, res) => {
   try {
     // Use Spotify API to have a "log in with my spotify credentials" button that logs in if user is already in database 
     // or creates user in database using Spotify credentials with some more fields to fill out to complete profile
-    res.render("login");
+    res.render("login", {
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -64,6 +66,20 @@ router.get('/matchEngine', async (req, res) => {
 router.get('/user/:id', async (req, res) => {
   try {
     // Displays profile for user, but only if you are already matched/friends with
+    const userData = await User.findByPk(req.params.id, {
+      include: [
+        {
+          // Include relevent models that maybe store spotify data, friends, etc
+        },
+      ],
+    });
+    // Serialize user data
+    const user = userData.get({ plain: true });
+    // Pass serialized data and session into dashboard template
+    res.render("user", {
+      ...user,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
