@@ -13,9 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/register', async (req, res) => {
-  try {
-    // Display register page with username pre-populated to match Spotify user name, description about yourself, photo, & email
-    
+  try {    
     // Create conditional statement that if user exists in our database, take them to the dashboard
     // Otherwise, render the register handlebars partial view
     const userData = await User.findByPk(req.session.user_id, {
@@ -23,9 +21,11 @@ router.get('/register', async (req, res) => {
     });
 
     if (userData) {
+      // If user is in database, take them to their dashboard
       res.redirect("/dashboard");
       return;
-    } else{
+    } else {
+      // Display register page with username pre-populated to match Spotify user name, description section, photo, & email
       res.render("register");
     }
     
@@ -34,9 +34,19 @@ router.get('/register', async (req, res) => {
   }
 });
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Display users profile information, some info from their Spotify profile (top songs, etc) and list of friends they've connected to
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+    // Serialize user data
+    const user = userData.get({ plain: true });
+    // Pass serialized data and session into dashboard template
+    res.render("dashboard", {
+      ...user,
+      logged_in: true,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
