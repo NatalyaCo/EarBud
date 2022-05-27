@@ -15,6 +15,20 @@ router.get('/', async (req, res) => {
 router.get('/register', async (req, res) => {
   try {
     // Display register page with username pre-populated to match Spotify user name, description about yourself, photo, & email
+    
+    // Create conditional statement that if user exists in our database, take them to the dashboard
+    // Otherwise, render the register handlebars partial view
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+
+    if (userData) {
+      res.redirect("/dashboard");
+      return;
+    } else{
+      res.render("register");
+    }
+    
   } catch (err) {
     res.status(500).json(err);
   }
