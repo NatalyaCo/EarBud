@@ -1,10 +1,10 @@
 const cloudinary = require('cloudinary');
 
-cloudinary.config ([
+cloudinary.config ({
     cloud_name: 'dtpoyncyn',
     api_key: '683253746591584',
     api_secret: 'jbfe8TPl6QzjP-pTz7SYeoMumMg' 
-]);
+});
 
 console.log (a-ok)
 
@@ -61,3 +61,4 @@ function showUploadWidget() {
      });
     }
 
+showUploadWidget()
