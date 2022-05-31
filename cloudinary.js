@@ -6,7 +6,7 @@ cloudinary.config ({
     api_secret: 'jbfe8TPl6QzjP-pTz7SYeoMumMg' 
 });
 
-console.log (a-ok)
+console.log ("a-ok")
 
 function showUploadWidget() {
     cloudinary.openUploadWidget({
