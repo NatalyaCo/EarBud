@@ -13,17 +13,17 @@ router.get('/', async (req, res) => {
 });
 
 // Find preference by user_id
-// router.get("/:user_id", async (req, res) => {
-//   try {
-//     const preferenceData = await Preferences.findByPk(req.session.user_id, {
-//       attributes: { exclude: ["password"] },
-//       include: [{ model: User }],
-//     });
-//     res.status(200).json(preferenceData);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+router.get('/:user_id', async (req, res) => {
+  try {
+    const preferenceData = await Preferences.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: User }],
+    });
+    res.status(200).json(preferenceData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 // Create new preference
 router.post('/', withAuth, async (req, res) => {
