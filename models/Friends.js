@@ -35,4 +35,4 @@ Friends.init(
   }
 );
 
-module.exports = Preference;
+module.exports = Friends;
