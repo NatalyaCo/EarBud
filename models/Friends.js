@@ -31,7 +31,7 @@ Friends.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'preference',
+    modelName: 'friends',
   }
 );
 
