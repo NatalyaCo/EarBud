@@ -19,18 +19,18 @@ Preference.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fave_artist: {
+    fave_experience_style: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fave_song: {
+    fave_decade: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // intentions: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    // },
+    intentions: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
