@@ -8,10 +8,11 @@ cloudinary.config ({
 
 console.log ("a-ok")
 
+
 function showUploadWidget() {
     cloudinary.openUploadWidget({
-       cloudName: "<cloud name>",
-       uploadPreset: "<upload preset>",
+       cloudName: "dtpoyncyn",
+       uploadPreset: "rvv34pcq",
        sources: [
            "local",
            "url",
@@ -26,7 +27,7 @@ function showUploadWidget() {
            "istock",
            "unsplash"
        ],
-       googleApiKey: "<image_search_google_api_key>",
+    //    googleApiKey: "<image_search_google_api_key>",
        showAdvancedOptions: true,
        cropping: true,
        multiple: false,
@@ -60,5 +61,9 @@ function showUploadWidget() {
       }
      });
     }
+
+   
+    
+    
 
 showUploadWidget()
