@@ -62,8 +62,11 @@ function showUploadWidget() {
      });
     }
 
-   
-    
-    
-
+ 
 showUploadWidget()
+
+// const myGallery = cloudinary.galleryWidget({ 
+//     container: "#my-gallery", 
+//     cloudName: "demo", 
+//     mediaAssets: [{ tag: "bag" }]    // by default mediaType: "image"
+//   });
