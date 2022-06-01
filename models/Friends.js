@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Preference extends Model {}
+class Friends extends Model {}
 
-Preference.init(
+Friends.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,27 +11,14 @@ Preference.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    about_me: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    fave_genre: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    fave_experience_style: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    fave_decade: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    intentions: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
+    matched_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
