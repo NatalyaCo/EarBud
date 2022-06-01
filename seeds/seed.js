@@ -12,12 +12,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const preference of preferenceData) {
-    await Preference.create({
-      ...preference,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const preference = await Preference.bulkCreate(preferenceData, {
+    returning: true,
+  });
 
   process.exit(0);
 };

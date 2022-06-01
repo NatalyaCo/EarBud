@@ -1,38 +1,36 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Preference extends Model {}
+class Preferences extends Model {}
 
-Preference.init(
+Preferences.init(
   {
-
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-    about_me:{
-        type: DataTypes.STRING,
-        allowNull: false,
-    },  
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    about_me: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     fave_genre: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fave_artist: {
+    fave_experience_style: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fave_song: {
+    fave_decade: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    friend_wish: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    intentions: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -46,8 +44,8 @@ Preference.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'preference',
+    modelName: 'preferences',
   }
 );
 
-module.exports = Preference;
+module.exports = Preferences;

@@ -1,13 +1,23 @@
 const User = require('./User');
-const Preference = require('./Preference');
+const Preferences = require('./Preferences');
+const Friends = require('./Friends');
 
-User.hasMany(Preference, {
+User.hasMany(Preferences, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE',
 });
 
-Preference.belongsTo(User, {
-  foreignKey: 'user_id'
+Preferences.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
-module.exports = { User, Preference };
+User.hasMany(Friends, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+Friends.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+module.exports = { User, Preferences, Friends };
