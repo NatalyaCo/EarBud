@@ -5,17 +5,16 @@ class Preference extends Model {}
 
 Preference.init(
   {
-
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-    about_me:{
-        type: DataTypes.STRING,
-        allowNull: false,
-    },  
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    about_me: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     fave_genre: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,10 +27,10 @@ Preference.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    friend_wish: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
+    // intentions: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
