@@ -28,11 +28,11 @@ User.init(
         isEmail: true,
       },
     },
-    spotifyUsername: {
+    spotify_username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    spotifyPassword: {
+    spotify_password: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -40,15 +40,21 @@ User.init(
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.spotifyPassword = await bcrypt.hash(newUserData.spotifyPassword, 10);
+        newUserData.spotify_password = await bcrypt.hash(
+          newUserData.spotify_password,
+          10
+        );
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.spotifyPassword = await bcrypt.hash(updatedUserData.spotifyPassword, 10);
+        updatedUserData.spotify_password = await bcrypt.hash(
+          updatedUserData.spotify_password,
+          10
+        );
         return updatedUserData;
-      }, 
       },
-    
+    },
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
