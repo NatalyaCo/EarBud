@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <h3>About Me Section</h3>
-  
+
 </head>
 
 <body>
@@ -21,74 +21,76 @@
     uploadPreset: 'rvv34pcq'}, (error, result) => { 
       if (!error && result && result.event === "success") { 
         console.log('Done! Here is the image info: ', result.info.url); 
+
       }
     }
-  )
-  
-  document.getElementById("upload_widget").addEventListener("click", function(){
+    )
+
+    document.getElementById("upload_widget").addEventListener("click", function () {
       myWidget.open();
     }, false);
-  </script>  
-   
-<body>
+  </script>
 
-  
-<form>
+  <body>
 
-<div class="input-field col s9">
-  
-  <select>
-    <option value="" disabled selected>Music to me is</option>
-    <option value="1">EVERYTHING</option>
-    <option value="2">Something I can DANCE TO</option>
-    <option value="3">COOL but I have other hobbies</option>
-    </select>
-    <!-- <label>Question 1</label>  -->
-  
-  <select>
-    <option value="" disabled selected>My favorite genre of music is</option>
-    <option value="1">Rock</option>
-    <option value="2">Hip Hop </option>
-    <option value="3">Techno</option>
-    <option value="4">Country </option>
-    <option value="5">Pop</option>
-    <option value="6">Classical and Broadway</option>
-    <option value="7">Indie Rock</option>
-  </select>
-  <!-- <label>Question 2</label> -->
 
-  <select>
-    <option value="" disabled selected>My favorite way to enjoy music is</option>
-    <option value="1">At a Stadium</option>
-    <option value="2">At a Club</option>
-    <option value="3">At Home </option>
-    <option value="4">In my car </option>
-    <option value="5">At a Party </option>
-    <option value="6">At a Theatre</option>
+    <form>
 
-  </select>
-  <!-- <label>Question 3</label> -->
+      <div class="input-field col s9">
 
-  <!-- <select>
+        <select>
+          <option value="" disabled selected>Music to me is</option>
+          <option value="1">EVERYTHING</option>
+          <option value="2">Something I can DANCE TO</option>
+          <option value="3">COOL but I have other hobbies</option>
+        </select>
+        <!-- <label>Question 1</label>  -->
+
+        <select>
+          <option value="" disabled selected>My favorite genre of music is</option>
+          <option value="1">Rock</option>
+          <option value="2">Hip Hop </option>
+          <option value="3">Techno</option>
+          <option value="4">Country </option>
+          <option value="5">Pop</option>
+          <option value="6">Classical and Broadway</option>
+          <option value="7">Indie Rock</option>
+        </select>
+        <!-- <label>Question 2</label> -->
+
+        <select>
+          <option value="" disabled selected>My favorite way to enjoy music is</option>
+          <option value="1">At a Stadium</option>
+          <option value="2">At a Club</option>
+          <option value="3">At Home </option>
+          <option value="4">In my car </option>
+          <option value="5">At a Party </option>
+          <option value="6">At a Theatre</option>
+
+        </select>
+        <!-- <label>Question 3</label> -->
+
+        <!-- <select>
     <option value="" disabled selected>My favorite Music Decade is</option>
    -->
-  <!-- <label>Question 4</label> -->
+        <!-- <label>Question 4</label> -->
 
-  <select>
-    <option value="" disabled selected>I would like to meet</option>
-    <option value="1">People to go to Concerts with</option>
-    <option value="2">People to go dancing with</option>
-    <option value="3">People to meet for a drink and listen to new live music</option>
-    <option value="4">People to catch a symphony or musical with  </option>
-    <option value="5"> People to rock out with at huge concert </option>
-  </select>
-  <!-- <label>Question 5</label> -->
-</div>
-</form>
-</body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="/script.js"></script>
+        <select>
+          <option value="" disabled selected>I would like to meet</option>
+          <option value="1">People to go to Concerts with</option>
+          <option value="2">People to go dancing with</option>
+          <option value="3">People to meet for a drink and listen to new live music</option>
+          <option value="4">People to catch a symphony or musical with </option>
+          <option value="5"> People to rock out with at huge concert </option>
+        </select>
+        <!-- <label>Question 5</label> -->
+      </div>
+    </form>
+  </body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../script.js"></script>
+
 </html>
-
