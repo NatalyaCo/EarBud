@@ -5,8 +5,7 @@ const { User } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
-    const userData2 = await User.findOne({ where: { email: req.body.email } });
-    res.status(200).json(userData2);
+    res.status(200).json(userData);
   } catch (err) {
     res.status(500).json(err);
   }
