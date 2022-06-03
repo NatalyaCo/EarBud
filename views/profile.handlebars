@@ -86,6 +86,7 @@
       
       <label for="preferences-fave_decade">My Favorite Decade to Listen Music from Is:</label>
       <select id="fave_decade" name="fave_decade" class="form-control">
+     
      <option value="Old">Anything Before WW2</option>
     <option value="50_60">1950 and 60</option>
     <option value="70_80">80</option>1970 and 80</option>
@@ -98,7 +99,7 @@
       
       <label for="prefereces-intentions">I Would Like to Meet:</label>
       <select id="intentions" name="intentions" class="form-control">
-        <option value="Concerts">People to go to Concerts with</option>
+        <option value="Concerts">People to go to Small Concerts with</option>
       <option value="Dancing">People to go dancing with</option>
       <option value="New">People to meet for a drink and listen to new live music</option>
       <option value="Musical">People to catch a symphony or musical with  </option>
@@ -109,19 +110,7 @@
 </div>
 </form> 
 </div>  
-      {{!-- <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div> --}}
+     
 
   {{#if prererences.length}}
   <div class="col-md-6 preferences-list">
@@ -130,7 +119,7 @@
     {{#each preferences as |profile|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{preferences.id}}">{{preferences.name}}</a></h4>
+        <h4><a href="/preferences/{{preferences.id}}">{{preferences.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{preferences.id}}">DELETE</button>
