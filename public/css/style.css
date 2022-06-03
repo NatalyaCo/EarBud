@@ -9,6 +9,10 @@ button {
   bottom: 100px;
 }
 
+body {
+  background-color: black;
+}
+
 h2 {
   font-family: monospace;
   color: white;
@@ -19,7 +23,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 500px;
+  top: 10px;
 }
 
 .header {
@@ -59,8 +63,8 @@ h2 {
 }
 
 .inputBox {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   margin: 20px;
   position: relative;
   left: 40%;
