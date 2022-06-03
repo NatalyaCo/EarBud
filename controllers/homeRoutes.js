@@ -3,15 +3,13 @@ const { Preferences, User, Friends } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  try {
-    // Use Spotify API to have a "log in with my spotify credentials" button that logs in if user is already in database
-    // or creates user in database using Spotify credentials with some more fields to fill out to complete profile
-    res.render('login', {
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
   }
+  // Render login display
+  res.render('login');
 });
 
 router.get('/register', async (req, res) => {
