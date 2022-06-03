@@ -2,28 +2,41 @@
   background-color: black;
 }
 
-button {
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px black inset !important;
+  -webkit-text-fill-color: white;
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px black inset !important;
+  -webkit-text-fill-color: white;
+}
+
+/* button {
   background-color: transparent;
   border-radius: 100px;
   position: relative;
   bottom: 100px;
-}
+} */
 
-body {
+/* body {
   background-color: black;
-}
+} */
 
 h2 {
   font-family: monospace;
   color: white;
 }
 
+.form-input {
+  color: white;
+}
+
+.form-group {
+  background-color: black;
+}
+
 .landingPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: 10px;
+  padding-top: 150px;
 }
 
 .header {
@@ -62,30 +75,35 @@ h2 {
   float: right;
 }
 
-.inputBox {
-  /* display: flex;
+.btn-primary {
+  color: black;
+  background-color: white;
+}
+
+/* .inputBox { */
+/* display: flex;
   flex-direction: column; */
-  margin: 20px;
+/* margin: 20px;
   position: relative;
   left: 40%;
   top: 200px;
-  width: 250px;
+  width: 20px;
   height: 35px;
   text-align: center;
   background-color: white;
   font-family: monospace;
-}
+} */
 
-.login {
+/* .login {
   position: absolute;
   left: 40%;
   bottom: 60%;
   color: white;
   font-family: monospace;
   font-size: 25px;
-}
+} */
 
-#loginBtn {
+/* #loginBtn {
   width: 65px;
   color: grey;
 }
@@ -98,4 +116,4 @@ h2 {
   .header-right {
     float: none;
   }
-}
+} */
