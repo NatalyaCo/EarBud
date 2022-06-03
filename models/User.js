@@ -28,8 +28,16 @@ User.init(
         isEmail: true,
       },
     },
+
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [8],
       },
-          // spotify_username: {
+    },
+    // spotify_username: {
+
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
