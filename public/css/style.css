@@ -9,6 +9,10 @@ button {
   bottom: 100px;
 }
 
+body {
+  background-color: black;
+}
+
 h2 {
   font-family: monospace;
   color: white;
@@ -19,7 +23,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 500px;
+  top: 10px;
 }
 
 .header {
@@ -58,6 +62,33 @@ h2 {
   float: right;
 }
 
+.inputBox {
+  /* display: flex;
+  flex-direction: column; */
+  margin: 20px;
+  position: relative;
+  left: 40%;
+  top: 200px;
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  background-color: white;
+  font-family: monospace;
+}
+
+.login {
+  position: absolute;
+  left: 40%;
+  bottom: 60%;
+  color: white;
+  font-family: monospace;
+  font-size: 25px;
+}
+
+#loginBtn {
+  width: 65px;
+  color: grey;
+}
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
