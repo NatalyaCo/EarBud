@@ -2,6 +2,15 @@
   background-color: black;
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px black inset !important;
+  -webkit-text-fill-color: white;
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px black inset !important;
+  -webkit-text-fill-color: white;
+}
+
 /* button {
   background-color: transparent;
   border-radius: 100px;
@@ -20,6 +29,10 @@ h2 {
 
 .form-input {
   color: white;
+}
+
+.form-group {
+  background-color: black;
 }
 
 .landingPage {
