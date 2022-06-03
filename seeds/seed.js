@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Preference } = require('../models');
+const { User, Preferences } = require('../models');
 
 const userData = require('./userData.json');
 const preferenceData = require('./preferenceData.json');
@@ -12,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const preference = await Preference.bulkCreate(preferenceData, {
+  const preference = await Preferences.bulkCreate(preferenceData, {
     returning: true,
   });
 
