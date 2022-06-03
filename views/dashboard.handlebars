@@ -1,10 +1,15 @@
 <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_picture}}}</p>
-  <p>{{preferences}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
+  <h2>Welcome to My Dashboard!</h2>
+  <h2>My name is{{user.name}}</h2>
+
+  <p>GET PICTURE</p>
+
+  <p>My attitude about music is {{preferences.about_me}} and I would like to meet {{preferences.intentions}}.</p>
+  <p>At this time, my favorite music genre is {{preferences.fave_genre}} from {{preferences.fave_decade}} that I would like to experience at {{preferences.fave_experience_style}}</p>
+
+
+  <p>You can get to know me a little better by checking out my Spotify playlist{{user.spotify_username}}.</p>
+  <p>Feel free to contact me with email at {{user.email}} and we can have a chat!</p>
+
+  
+ 
