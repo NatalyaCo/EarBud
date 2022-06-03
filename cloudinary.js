@@ -65,3 +65,60 @@ function showUploadWidget() {
 
 showUploadWidget();
 
+
+var url = '';
+
+fetch(url).then(function(response) {
+  // if serer response is ok
+  if (response.ok) {
+      // log response
+      console.log(response);
+      response.json().then(function (data) {
+          // long data returned from server
+          console.log(data);
+          // update the image src with the photo link 
+          img.src = data.photos[0].image.web;
+          //clear search field after submission
+          
+      })
+  }
+});
+
+/* routes/index.js */
+
+/**
+ * 
+ * 
+ * The following code is added to configure the POST /upload route
+ * to upload files using the already defined Multer configuration
+ */
+
+//  router.post('/upload', upload.single(process.env.AVATAR_FIELD), function(req, res, next) {
+
+//   var files;
+//   var file = req.file.filename;
+//   var matches = file.match(/^(.+?)_.+?\.(.+)$/i);
+  
+//   if (matches) {
+//   files = _.map(['lg', 'md', 'sm'], function(size) {
+//   return matches[1] + '_' + size + '.' + matches[2];
+//   });
+//   } else {
+//   files = [file];
+//   }
+  
+//   files = _.map(files, function(file) {
+//   var port = req.app.get('port');
+//   var base = req.protocol + '://' + req.hostname + (port ? ':' + port : '');
+//   var url = path.join(req.file.baseUrl, file).replace(/[\\\/]+/g, '/').replace(/^[\/]+/g, '');
+  
+//   return (req.file.storage == 'local' ? base : '') + '/' + url;
+//   });
+  
+//   res.json({
+//   images: files
+//   });
+  
+//   });
+  
+  
