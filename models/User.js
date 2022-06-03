@@ -45,7 +45,8 @@ User.init(
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
-  // },
+    // },
+  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
