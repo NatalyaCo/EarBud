@@ -3,9 +3,9 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-  // checkPassword(loginPw) {
-  //   return bcrypt.compareSync(loginPw, this.password);
-  // }
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
 }
 
 User.init(
@@ -28,6 +28,7 @@ User.init(
         isEmail: true,
       },
     },
+
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,6 +37,7 @@ User.init(
       },
     },
     // spotify_username: {
+
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
@@ -43,25 +45,25 @@ User.init(
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
-  },
-  // {
-  //   hooks: {
-  //     beforeCreate: async (newUserData) => {
-  //       newUserData.spotify_password = await bcrypt.hash(
-  //         newUserData.spotify_password,
-  //         10
-  //       );
-  //       return newUserData;
-  //     },
-  //     beforeUpdate: async (updatedUserData) => {
-  //       updatedUserData.spotify_password = await bcrypt.hash(
-  //         updatedUserData.spotify_password,
-  //         10
-  //       );
-  //       return updatedUserData;
-  //     },
-  //   },
+  // },
   {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.spotify_password = await bcrypt.hash(
+          newUserData.spotify_password,
+          10
+        );
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.spotify_password = await bcrypt.hash(
+          updatedUserData.spotify_password,
+          10
+        );
+        return updatedUserData;
+      },
+    },
+
     sequelize,
     timestamps: false,
     freezeTableName: true,

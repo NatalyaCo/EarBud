@@ -66,5 +66,25 @@ function showUploadWidget() {
 showUploadWidget();
 
 
+var url;
+
+    // api url. remove spaces from input and replace spaces with dashes, and make all letters lowercase
+    var url = "" 
+    // fetch api
+    fetch(url).then(function(response) {
+        // if serer response is ok
+        if (response.ok) {
+            // log response
+            console.log(response);
+            response.json().then(function (data) {
+                // long data returned from server
+                console.log(data);
+                // update the image src with the photo link of the city
+                img.src = data.photos[0].image.web;
+                //clear search field after submission
+                // resetInput(getCityEl.value);
+            })
+        }
+    });
 
 
