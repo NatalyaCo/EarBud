@@ -1,0 +1,26 @@
+[
+  {
+    "about_me": "My name is Shlomo",
+    "fave_genre": "rock",
+    "fave_experience_style": "Live",
+    "fave_decade": "90s",
+    "intentions": "make friends",
+    "user_id": 1
+  },
+  {
+    "about_me": "My name is Lerantino",
+    "fave_genre": "Rap",
+    "fave_experience_style": "Home",
+    "fave_decade": "80s",
+    "intentions": "Party",
+    "user_id": 2
+  },
+  {
+    "about_me": "My name is Amiko",
+    "fave_genre": "Pop",
+    "fave_experience_style": "Big Concerts",
+    "fave_decade": "50s",
+    "intentions": "Test",
+    "user_id": 3
+  }
+]
