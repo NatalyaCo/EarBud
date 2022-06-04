@@ -74,12 +74,8 @@ h2 {
 }
 
 .login {
-  position: absolute;
-  left: 40%;
-  bottom: 60%;
-  color: white;
-  font-family: monospace;
-  font-size: 25px;
+  display: flex;
+  
 }
 
 #loginBtn {

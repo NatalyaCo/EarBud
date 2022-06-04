@@ -21,6 +21,7 @@
   "homepage": "https://github.com/NatalyaCo/EarBud#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cloudinary": "^1.30.0",
     "connect-session-sequelize": "^7.1.3",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -29,5 +30,8 @@
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
