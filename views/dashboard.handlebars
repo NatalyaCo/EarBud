@@ -1,8 +1,25 @@
 <div class="text-center">
-  <h2>Welcome to My Dashboard!</h2>
-  <h2>My name is {{name}}</h2>
+    <head>
+   <mets charset="UTF-8"/>     
+  <title>Welcome to My Dashboard!</title>
+  
+</head>
+<body>
+<div id="greeting" class="text-center"></div>
 
-  <p>GET PICTURE</p>
+<p>GET PICTURE</p>
+
+  <script> src="https://cdnjs.cloudfare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script> 
+  <script id="greeting-template" type="text/x-handlebars-template">
+
+  <p>My name is {{name}}</p>
+
+  </script>
+ </div>     
+  
+<div class="preferences" class="text-center">
+  
+    
 
   <p>My attitude about music is {{preferences.about_me}} and I would like to meet {{preferences.intentions}}.</p>
   <p>At this time, my favorite music genre is {{preferences.fave_genre}} from {{preferences.fave_decade}} that I would like to experience at {{preferences.fave_experience_style}}</p>
@@ -11,5 +28,8 @@
   <p>You can get to know me a little better by checking out my Spotify playlist {{spotify_username}}.</p>
   <p>Feel free to contact me with email at {{email}} and we can have a chat!</p>
 
+ </div> 
+</body>
   
+  </html>
  
