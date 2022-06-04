@@ -111,14 +111,12 @@
 </div>
 </div>
 </form> 
-<button>
-  
-</button>
+<button class='btn btn-primary submit_pref' type='submit'>Submit!</button>
 </div>
 
 {{!-- I think lines 117-133 would be better suited to display on a different page since this is just the page they use when they create a user name--}}
 {{!-- Maybe we should let them see this on the dashboard page, or we can create a separate route to just dispay the users preferences where they can change them --}}
-  {{#if preferences.length}}
+  {{!-- {{#if preferences.length}}
   <div class="col-md-6 preferences-list">
     <h3>My Preferences:</h3>
 
@@ -133,7 +131,7 @@
     </div>
     {{/each}}
   </div>
-  {{/if}} 
+  {{/if}}  --}}
 </div>
 
 <script src="./js/profile.js"></script>
