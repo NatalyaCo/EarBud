@@ -46,24 +46,24 @@ User.init(
     //   allowNull: false,
     // },
     // },
-  },
-  {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.spotify_password = await bcrypt.hash(
-          newUserData.spotify_password,
-          10
-        );
-        return newUserData;
-      },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.spotify_password = await bcrypt.hash(
-          updatedUserData.spotify_password,
-          10
-        );
-        return updatedUserData;
-      },
-    },
+  // },
+  // {
+  //   hooks: {
+  //     beforeCreate: async (newUserData) => {
+  //       newUserData.spotify_password = await bcrypt.hash(
+  //         newUserData.spotify_password,
+  //         10
+  //       );
+  //       return newUserData;
+  //     },
+  //     beforeUpdate: async (updatedUserData) => {
+  //       updatedUserData.spotify_password = await bcrypt.hash(
+  //         updatedUserData.spotify_password,
+  //         10
+  //       );
+  //       return updatedUserData;
+  //     },
+  //   },
 
     sequelize,
     timestamps: false,
