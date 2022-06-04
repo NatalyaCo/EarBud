@@ -16,19 +16,19 @@ router.get('/register', async (req, res) => {
   try {
     // Create conditional statement that if user exists in our database, take them to the dashboard
     // Otherwise, render the register handlebars partial view
-    const userData = await User.findByPk(req.session.user_id, {});
+    // const userData = await User.findByPk(req.session.user_id, {});
 
-    if (userData) {
-      // If user is in database, take them to their dashboard
-      res.redirect('/dashboard');
-      return;
-    } else {
-      // Display register page with username, description section, photo, & email
-      res.render('register', {
-        ...user,
-        logged_in: req.session.logged_in,
-      });
-    }
+    // if (userData) {
+    //   // If user is in database, take them to their dashboard
+    //   res.redirect('/dashboard');
+    //   return;
+    // } else {
+    // Display register page with username, description section, photo, & email
+    res.render('register', {
+      ...user,
+      logged_in: req.session.logged_in,
+    });
+    // }
   } catch (err) {
     res.status(500).json(err);
   }
