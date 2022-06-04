@@ -1,6 +1,8 @@
+var profile_pic;
+
 const submitFormHandler = async (event) => {
   event.preventDefault();
-
+  console.log(profile_pic);
   const about_me = document.querySelector('#about_me').value.trim();
   const fave_genre = document.querySelector('#fave_genre').value.trim();
   const fave_experience_style = document
@@ -8,8 +10,6 @@ const submitFormHandler = async (event) => {
     .value.trim();
   const fave_decade = document.querySelector('#fave_decade').value.trim();
   const intentions = document.querySelector('#intentions').value.trim();
-  const profile_pic = result.info.url;
-  const user_id = req.session.user_id;
 
   if (
     about_me &&
@@ -28,7 +28,6 @@ const submitFormHandler = async (event) => {
         fave_decade,
         intentions,
         profile_pic,
-        user_id,
       }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -41,6 +40,27 @@ const submitFormHandler = async (event) => {
   }
 };
 
+var myWidget = cloudinary.createUploadWidget(
+  {
+    cloudName: 'dtpoyncyn',
+    uploadPreset: 'rvv34pcq',
+  },
+  (error, result) => {
+    if (!error && result && result.event === 'success') {
+      console.log('Done! Here is the image info: ', result.info.url);
+      profile_pic = result.info.url;
+    }
+  }
+);
+
+document.getElementById('upload_widget').addEventListener(
+  'click',
+  function () {
+    myWidget.open();
+  },
+  false
+);
+
 document
   .querySelector('.save_pref')
-  .addEventListener('submit', submitFormHandler);
+  .addEventListener('click', submitFormHandler);
