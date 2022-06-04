@@ -1,8 +1,8 @@
-var profile_pic;
+var profile_picture;
 
 const submitFormHandler = async (event) => {
   event.preventDefault();
-  console.log(profile_pic);
+  console.log(profile_picture);
   const about_me = document.querySelector('#about_me').value.trim();
   const fave_genre = document.querySelector('#fave_genre').value.trim();
   const fave_experience_style = document
@@ -17,7 +17,7 @@ const submitFormHandler = async (event) => {
     fave_experience_style &&
     fave_decade &&
     intentions &&
-    profile_pic
+    profile_picture
   ) {
     const response = await fetch('/api/preferences', {
       method: 'POST',
@@ -27,7 +27,7 @@ const submitFormHandler = async (event) => {
         fave_experience_style,
         fave_decade,
         intentions,
-        profile_pic,
+        profile_picture,
       }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -47,8 +47,8 @@ var myWidget = cloudinary.createUploadWidget(
   },
   (error, result) => {
     if (!error && result && result.event === 'success') {
-      console.log('Done! Here is the image info: ', result.info.url);
-      profile_pic = result.info.url;
+      profile_picture = result.info.url;
+      console.log('Done! Here is the image info: ', profile_picture);
     }
   }
 );
