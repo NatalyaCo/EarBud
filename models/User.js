@@ -28,7 +28,6 @@ User.init(
         isEmail: true,
       },
     },
-
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,34 +35,22 @@ User.init(
         len: [8],
       },
     },
-    // spotify_username: {
 
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // spotify_password: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // },
-  // },
-  // {
-  //   hooks: {
-  //     beforeCreate: async (newUserData) => {
-  //       newUserData.spotify_password = await bcrypt.hash(
-  //         newUserData.spotify_password,
-  //         10
-  //       );
-  //       return newUserData;
-  //     },
-  //     beforeUpdate: async (updatedUserData) => {
-  //       updatedUserData.spotify_password = await bcrypt.hash(
-  //         updatedUserData.spotify_password,
-  //         10
-  //       );
-  //       return updatedUserData;
-  //     },
-  //   },
+  },
+  {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
+      },
+    },
 
     sequelize,
     timestamps: false,

@@ -14,20 +14,17 @@ router.get('/', async (req, res) => {
 
 router.get('/register', async (req, res) => {
   try {
-    // Create conditional statement that if user exists in our database, take them to the dashboard
-    // Otherwise, render the register handlebars partial view
+    // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
     });
-
-    if (userData) {
-      // If user is in database, take them to their dashboard
-      res.redirect('/dashboard');
-      return;
-    } else {
-      // Display register page with username pre-populated to match Spotify user name, description section, photo, & email
-      res.render('register');
-    }
+    // Serialize user data
+    const user = userData.get({ plain: true });
+    // Pass serialized data and session into dashboard template
+    res.render('register', {
+      ...user,
+      logged_in: true,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -41,7 +38,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
     // Serialize user data
     const user = userData.get({ plain: true });
-    console.log(user)
+    console.log(user);
     // Pass serialized data and session into dashboard template
     res.render('dashboard', {
       ...user,
@@ -97,21 +94,17 @@ router.get('/user/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get("/profile", withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   // try {
-    const userData = await User.findByPk(req.session.user_id, {
-           
-    })
-    const user= userData.get({ plain: true});
-    res.render('profile', {
-      ...user,
-      logged_in: req.session.logged_in,
-  
-    });
+  const userData = await User.findByPk(req.session.user_id, {});
+  const user = userData.get({ plain: true });
+  res.render('register', {
+    ...user,
+    logged_in: req.session.logged_in,
+  });
   // } catch (err) {
   //   res.status(500).json(err);
   // }
-  
 });
 
 module.exports = router;
