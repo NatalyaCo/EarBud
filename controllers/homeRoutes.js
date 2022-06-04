@@ -20,7 +20,7 @@ router.get('/register', async (req, res) => {
     });
     // Serialize user data
     const user = userData.get({ plain: true });
-    // Pass serialized data and session into dashboard template
+    // Pass serialized data and session into register template
     res.render('register', {
       ...user,
       logged_in: true,
@@ -49,28 +49,28 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-router.get('/matchEngine', withAuth, async (req, res) => {
-  try {
-    // Displays match section where app suggests friends that have similar music interest, displays their profile info and gives
-    // user option to try to match with suggestion or ignore. (need functionality to not suggest user who are already friends or rejects)
-    const userData = await User.findAll({
-      include: [
-        {
-          // Include relevent models that maybe store spotify data, friends, etc
-        },
-      ],
-    });
-    // Serialize post data
-    const users = postData.map((user) => user.get({ plain: true }));
-    // Pass serialized data and session into matchEngine template
-    res.render('matchEngine', {
-      users,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/matchEngine', withAuth, async (req, res) => {
+//   try {
+//     // Displays match section where app suggests friends that have similar music interest, displays their profile info and gives
+//     // user option to try to match with suggestion or ignore. (need functionality to not suggest user who are already friends or rejects)
+//     const userData = await User.findAll({
+//       include: [
+//         {
+//           // Include relevent models that maybe store spotify data, friends, etc
+//         },
+//       ],
+//     });
+//     // Serialize post data
+//     const users = postData.map((user) => user.get({ plain: true }));
+//     // Pass serialized data and session into matchEngine template
+//     res.render('matchEngine', {
+//       users,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/user/:id', withAuth, async (req, res) => {
   try {
@@ -105,6 +105,10 @@ router.get('/profile', withAuth, async (req, res) => {
   // } catch (err) {
   //   res.status(500).json(err);
   // }
+});
+
+router.get('/contact', async (req, res) => {
+  res.render('contact');
 });
 
 module.exports = router;
