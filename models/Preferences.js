@@ -33,7 +33,8 @@ Preferences.init(
     },
     profile_picture: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      defaultValue: '>:>SD',
     },
     user_id: {
       type: DataTypes.INTEGER,
