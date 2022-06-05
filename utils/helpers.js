@@ -7,15 +7,6 @@ module.exports = {
   //maybe throw in the cloudinary stuff into helper folder?
 };
 
-// helper for dashboard 
-// (function(){
-//   var theScriptHTML = document.getElementById('greeting-template').innerHTML;
-//   var theTemplate = Handlebars.compile(theScriptHTML);
-//   var contextObj = {name: "Katya"};
-//   var compiledData = theTemplate(contextObj);
-
-//   document.getElement('greeting-template').innerHTML = compiledData;
-// } ());
 
 // helper for spotify artist
 
@@ -38,3 +29,8 @@ module.exports = {
 //   var contextObj = theTemplate(data.tracks);
 //   $("#songs").append(contextObj);
 // }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var elems = document.querySelectorAll('.materialboxed');
+//   M.Materialbox.init(elems);
+// });
