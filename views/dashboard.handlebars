@@ -5,9 +5,7 @@
 </head>
 
 <body>
-
   <div class="name-dashboard">
-
     {{!-- start the page --}}
     <div class="font-effect-shadow-multiple">
       <div class="text-center">
@@ -20,51 +18,30 @@
       </div>
     </div>
     {{!-- this upper part is good for now --}}
-
     <div class="dashboard-container">
-
       {{!-- this div applies to the whole lower half --}}
-
       <div class="flex-container">
-
         <div class="flex-child magenta">
-
-
           <div class="user-pic">
             <img class="materialboxed" width="300" src="./public/Images/headshot_generic_cute.jpg">
-
           </div>
-
-
           <div class="flex-child">
             <h3>
               <p>Currently, my favorite artist is {{name}}</p>
             </h3>
-
-
             <p>Checkout some of their top songs on Spotify {{preferences.about_me}}</p>
-
-
           </div>
         </div>
         <div id="preferences">
           <div class="dash-text">
-
-
             <h1>
               <p>My name is {{name}}</p>
             </h1>
-
             <p>To Me, Music is {{preferences.about_me}}</p>
-
             <p>I would like to meet {{preferences.intentions}}.</p>
             <p>At this time, my favorite music genre is {{preferences.fave_genre}} from {{preferences.fave_decade}} that
               I would like to experience at {{preferences.fave_experience_style}}</p>
-
-
-
             <p>Feel free to contact me with email at {{email}} and we can have a chat!</p>
-
           </div>
         </div>
       </div>

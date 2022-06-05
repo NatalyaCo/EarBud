@@ -35,10 +35,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
     // Display users profile information, some info from their Spotify profile (top songs, etc) and list of friends they've connected to
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
+      include: [{ model: Preferences }],
     });
     // Serialize user data
     const user = userData.get({ plain: true });
-    console.log(user);
+    // console.log(user);
+
     // Pass serialized data and session into dashboard template
     res.render('dashboard', {
       ...user,
