@@ -6,8 +6,8 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Usage](#usage)
+- [Screenshot](#screenshot)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
 
@@ -33,13 +33,11 @@ This fullstack application is in the very early stages of development. Our long 
 
 Use the following link to visit our website: https://murmuring-hollows-86135.herokuapp.com/
 
+## Screenshot
+
 ## Contributing
 
 Please provide your email and/or Github username if you would like to contribute to this application.
-
-## Tests
-
-N/A
 
 ## Questions
 
