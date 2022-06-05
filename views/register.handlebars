@@ -1,18 +1,19 @@
 <div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+  <div class="top">
+    <h1>Welcome, {{name}}!</h1>
   </div>
 </div>
+<section>
 
 <div class="row mt-4">
   <div class="col-md-6">
     {{!-- Need to redo profile page to include actual picture, user info, friends matched with, and pending friend connections --}}
-    <h3>Create a New Profile</h3>
+    {{!-- <h3>Create a New Profile</h3> --}}
 
 <div class="container">
 
 <div class="row">
-  <h2>Please upload your picture below</h2>
+  <h2>To begin, please provide some information</h2>
 
   <button id="upload_widget" class="cloudinary-button">Upload Your Photo</button>
 
@@ -25,10 +26,10 @@
     <form class="form new-profile-form">
 
       <div class="form-group">
-        <label for="preferences-about_me">Music to Me Is:</label>
+        <label for="preferences-about_me"><h3>Music to Me Is:</h3></label>
         
       <select id="about_me" name="about_me" class="form-control">
-        {{!-- <option value="" disabled selected>Music to me is</option> --}}
+        <option value="" disabled selected>Select your answer</option>
         <option value="everything">EVERYTHING</option>
         <option value="dance">Something I can DANCE TO</option>
         <option value="coolBut">COOL but I have other hobbies</option>
@@ -38,10 +39,11 @@
 
     <div class="form-group">
       
-      <label for="preferences-fave_genre">My Favorite Music Genre Name Is:</label>
+      <label for="preferences-fave_genre"><h3> Favorite Music Genre Name Is:</h3></label>
+      
       <select id="fave_genre" name="fave_genre" class="form-control">
     
-    {{!-- <option value="" disabled selected>My favorite genre of music is</option> --}}
+    <option value="" disabled selected>Select your Genre</option>
     <option value="Rock">Rock</option>
     <option value="Rap">Rap </option>
     <option value="Techno">Techno</option>
@@ -55,10 +57,10 @@
 
   <div class="form-group">
       
-      <label for="preferences-fave_experience_style">My Favorite Way to Experience Music Is:</label>
+      <label for="preferences-fave_experience_style"><h3> Favorite Way to Experience Music Is:</h3></label>
       <select id="fave_experience_style" name="fave_experience_intentions" class="form-control">
 
-    {{!-- <option value="" disabled selected>My favorite way to enjoy music is</option> --}}
+    <option value="" disabled selected>Select a Venue</option>
     <option value="Stadium">At a Stadium</option>
     <option value="Club">At a Club</option>
     <option value="Home">At Home </option>
@@ -73,8 +75,10 @@
 
 <div class="form-group">
       
-  <label for="preferences-fave_decade">My Favorite Decade to Listen Music from Is:</label>
+  <label for="preferences-fave_decade"><h3> Favorite Decade to Listen Music from Is:</h3></label>
   <select id="fave_decade" name="fave_decade" class="form-control">
+
+    <option value="" disabled selected>Select the Decade</option>
     <option value="Old">Anything Before WW2</option>
     <option value="50_60">1950 and 60</option>
     <option value="70_80">80</option>1970 and 80</option>
@@ -84,15 +88,16 @@
 
 <div class="form-group">
       
-  <label for="prefereces-intentions">I Would Like to Meet:</label>
+  <label for="prefereces-intentions"><h3> Would Like to Meet:</h3></label>
   <select id="intentions" name="intentions" class="form-control">
+
+    <option value="" disabled selected>Select one</option>
     <option value="Concerts">People to go to Small Concerts with</option>
     <option value="Dancing">People to go dancing with</option>
     <option value="New">People to meet for a drink and listen to new live music</option>
     <option value="Musical">People to catch a symphony or musical with  </option>
     <option value="Rock_out"> People to rock out with at huge concert </option>
-  </select>
-{{!-- how do i take these values and insert them into profile? --}}
+
 </div>
 </div>
 </form> 
@@ -100,6 +105,7 @@
   Submit
 </button>
 </div>
+</section>
 
   {{!-- {{#if prererences.length}}
   <div class="col-md-6 preferences-list">
