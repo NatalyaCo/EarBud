@@ -106,6 +106,10 @@ router.get('/about', async (req, res) => {
   });
 });
 
+router.get('/login', async (req, res) => {
+  res.redirect('/');
+});
+
 // REMOVE DELETE LATER
 router.get('/register2', async (req, res) => {
   res.render('register', {});
