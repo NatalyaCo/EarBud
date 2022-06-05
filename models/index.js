@@ -2,7 +2,7 @@ const User = require('./User');
 const Preferences = require('./Preferences');
 const Friends = require('./Friends');
 
-User.hasMany(Preferences, {
+User.hasOne(Preferences, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
 });
