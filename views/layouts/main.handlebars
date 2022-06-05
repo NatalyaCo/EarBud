@@ -30,8 +30,9 @@
           <a href='/contact'>Contact</a>
           <a href='/about'>About</a>
           {{#if logged_in}}
-            <a href='/profile'>Profile</a>
             <a id='logout' href='#'>Logout</a>
+          {{else}}
+            <a href='/login'>Login</a>
           {{/if}}
         </div>
       </header>

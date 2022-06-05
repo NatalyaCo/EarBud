@@ -108,7 +108,15 @@ router.get('/profile', withAuth, async (req, res) => {
 });
 
 router.get('/contact', async (req, res) => {
-  res.render('contact');
+  res.render('contact', {
+    logged_in: req.session.logged_in,
+  });
+});
+
+router.get('/about', async (req, res) => {
+  res.render('about', {
+    logged_in: req.session.logged_in,
+  });
 });
 
 module.exports = router;
