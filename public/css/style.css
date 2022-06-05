@@ -2,15 +2,18 @@
   background-color: black;
 }
 
-input:-webkit-autofill {
+/* input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px black inset !important;
   -webkit-text-fill-color: white;
 }
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px black inset !important;
   -webkit-text-fill-color: white;
+} */
+h1 {
+  padding-left: 25px;
+  color: aliceblue;
 }
-
 h2 {
   font-family: monospace;
   color: white;
@@ -73,14 +76,14 @@ h2 {
 
 .hero-image {
   background-image: url(../images/sweet\ music.jpg);
-  height: 50%;
+  height: 30%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-.hero-text {
+/* .hero-text {
   font-size: 100px;
   text-align: center;
   position: absolute;
@@ -89,7 +92,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   
-}
+} */
 
 .user-pic {
   position: relative;
@@ -138,3 +141,23 @@ h2 {
 .flex-child:first-child {
   margin-right: 20px;
 } 
+
+.top {
+  padding-left: 25px;
+}
+
+.button {
+  padding-left: 25px;
+  height: 20px;
+  width: 40px;
+  border-radius: 25px;
+}
+
+section {
+  background-image: url(../images/key.jpg);
+  height: 1000px;
+}
+
+.container {
+  padding-left: 35px;
+}
