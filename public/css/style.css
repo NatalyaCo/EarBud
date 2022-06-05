@@ -2,14 +2,14 @@
   background-color: black;
 }
 
-/* input:-webkit-autofill {
+input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px black inset !important;
   -webkit-text-fill-color: white;
 }
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px black inset !important;
   -webkit-text-fill-color: white;
-} */
+}
 h1 {
   padding-left: 25px;
   color: aliceblue;
@@ -72,8 +72,6 @@ h2 {
   background-color: white;
 }
 
-
-
 .hero-image {
   background-image: url(../images/sweet\ music.jpg);
   height: 30%;
@@ -101,12 +99,10 @@ h2 {
 .name-dashboard {
   color: aliceblue;
   font-size: 30px;
-
 }
 .dashboard-container {
   display: flex;
   text-decoration: antiquewhite;
-
 }
 
 .dash-text {
@@ -117,7 +113,6 @@ h2 {
   text-align: left;
   color: aliceblue;
   font-size: 30px;
-
 }
 
 .intro {
@@ -136,11 +131,11 @@ h2 {
   font-size: 25px;
   flex: 1;
   border: 2px solid aliceblue;
-}  
+}
 
 .flex-child:first-child {
   margin-right: 20px;
-} 
+}
 
 .top {
   padding-left: 25px;
