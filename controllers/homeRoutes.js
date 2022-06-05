@@ -106,4 +106,9 @@ router.get('/about', async (req, res) => {
   });
 });
 
+// REMOVE DELETE LATER
+router.get('/register2', async (req, res) => {
+  res.render('register', {});
+});
+
 module.exports = router;
