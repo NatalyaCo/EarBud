@@ -6,14 +6,17 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px black inset !important;
   -webkit-text-fill-color: white;
 }
+
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px black inset !important;
   -webkit-text-fill-color: white;
 }
+
 h1 {
   padding-left: 25px;
   color: aliceblue;
 }
+
 h2 {
   font-family: monospace;
   color: white;
