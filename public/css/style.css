@@ -159,3 +159,40 @@ section {
 .container {
   padding-left: 35px;
 }
+
+footer {
+  overflow: hidden;
+  background-color: #1ed760;
+  padding: 20px 10px;
+  max-height: 50px;
+}
+
+footer p {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* footer a:hover {
+  background-color: white;
+  color: black;
+}
+
+footer a.active {
+  background-color: black;
+  color: white;
+} */
+
+main {
+  min-height: 550px;
+}
