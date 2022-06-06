@@ -10,27 +10,3 @@ module.exports = {
 
 // helper for spotify artist
 
-// function getArtistAdapter(){
-//   event.preventDefault();
-//   var artist = $('#artistQuery').val();
-
-//   $.ajax({
-//     method: 'GET',
-//     url: 'http://api.spotify.com/v1/artists/5WUlDfRSoLAfCVSX1WnrxN/top-tracks?country=US',
-//     }).done(function(data){
-//       getSongController(data);
-//     })
-
-// }
-
-// function getSongController(data){
-//   var theScriptHTML = $("#songListTemplate")[0].innerHTML;
-//   var theTemplate = Handlebars.compile(theScriptHTML);
-//   var contextObj = theTemplate(data.tracks);
-//   $("#songs").append(contextObj);
-// }
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   var elems = document.querySelectorAll('.materialboxed');
-//   M.Materialbox.init(elems);
-// });
