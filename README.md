@@ -31,7 +31,7 @@ This fullstack application is in the very early stages of development. Our long 
 
 ## Usage
 
-Use the following link to visit our website: https://murmuring-hollows-86135.herokuapp.com/
+Use the following link to visit our website: https://safe-sea-62699.herokuapp.com/
 
 ## Screenshot
 
