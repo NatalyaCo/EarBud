@@ -1,52 +1,33 @@
-<head>
-  <mets charset="UTF-8" />
-  <title>Welcome to My Dashboard!</title>
-  =======
-</head>
-
 <body>
   <div class="name-dashboard">
-    {{!-- start the page --}}
     <div class="font-effect-shadow-multiple">
-      <div class="text-center">
-        <p>Nice to Meet You!</p>
-      </div>
       <div class="hero-image">
-        <div class="hero-text">
-          {{!-- <p>Welcome to My Dashboard!</p> --}}
-        </div>
       </div>
     </div>
-    {{!-- this upper part is good for now --}}
     <div class="dashboard-container">
-      {{!-- this div applies to the whole lower half --}}
       <div class="flex-container">
         <div class="flex-child magenta">
           <div class="user-pic">
             <img class="materialboxed" width="300" src="{{preference.profile_picture}}">
           </div>
           <div class="flex-child text-center">
-            <h3>
+            <h3 class="text-capitalize">
               {{name}}
             </h3>
           </div>
         </div>
         <div id="preferences">
           <div class="dash-text">
-            <p>
-              My name is {{name}}.
-            </p>
+            <p>My name is {{name}}. </p>
             <p>To me, music is {{preference.about_me}}</p>
-            <p>I would like to meet {{preference.intentions}}.</p>
+            <p>I would like to meet {{preference.intentions}}</p>
             <p>At this time, my favorite music genre is {{preference.fave_genre}} from the {{preference.fave_decade}} that
               I would like to experience {{preference.fave_experience_style}}</p>
-            <p>Feel free to contact me with email at {{email}} and we can have a chat!</p>
+            <p>Feel free to contact me with email at <a href='mailto:{{email}}' class="text-white">{{email}}</a> and we can have a chat!</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </body>
-{{!-- <script src="/utils/helpers.js"></script> --}}
-
 </html>

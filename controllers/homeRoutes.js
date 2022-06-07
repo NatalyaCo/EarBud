@@ -51,51 +51,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-// router.get('/matchEngine', withAuth, async (req, res) => {
-//   try {
-//     // Displays match section where app suggests friends that have similar music interest, displays their profile info and gives
-//     // user option to try to match with suggestion or ignore. (need functionality to not suggest user who are already friends or rejects)
-//     const userData = await User.findAll({
-//       include: [
-//         {
-//           // Include relevent models that maybe store spotify data, friends, etc
-//         },
-//       ],
-//     });
-//     // Serialize post data
-//     const users = postData.map((user) => user.get({ plain: true }));
-//     // Pass serialized data and session into matchEngine template
-//     res.render('matchEngine', {
-//       users,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-// router.get('/user/:id', withAuth, async (req, res) => {
-//   try {
-//     // Displays profile for user, but only if you are already matched/friends with
-//     const userData = await User.findByPk(req.params.id, {
-//       include: [
-//         {
-//           // Include relevent models that maybe store spotify data, friends, etc
-//         },
-//       ],
-//     });
-//     // Serialize user data
-//     const user = userData.get({ plain: true });
-//     // Pass serialized data and session into user template
-//     res.render('user', {
-//       ...user,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 router.get('/contact', async (req, res) => {
   res.render('contact', {
     logged_in: req.session.logged_in,
