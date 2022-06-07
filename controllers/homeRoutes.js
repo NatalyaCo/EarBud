@@ -39,8 +39,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
     // Serialize user data
     const user = userData.get({ plain: true });
-    console.log(user);
-
     // Pass serialized data and session into dashboard template
     res.render('dashboard', {
       ...user,
@@ -61,6 +59,25 @@ router.get('/about', async (req, res) => {
   res.render('about', {
     logged_in: req.session.logged_in,
   });
+});
+
+router.get('/spotify', withAuth, async (req, res) => {
+  try {
+    // Display users profile information, some info from their Spotify profile (top songs, etc) and list of friends they've connected to
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Preferences }],
+    });
+    // Serialize user data
+    const user = userData.get({ plain: true });
+    // Pass serialized data and session into dashboard template
+    res.render('spotify', {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', async (req, res) => {
