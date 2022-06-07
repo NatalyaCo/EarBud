@@ -36,6 +36,11 @@ Use the following link to visit our website: https://safe-sea-62699.herokuapp.co
 
 ## Screenshot
 
+![Screenshot of Login](./public/images/loginScreenshot)
+![Screenshot of Register](./public/images/registerScreenshot)
+![Screenshot of Dashboard](./public/images/dashboardScreenshot)
+![Screenshot of Playlist](./public/images/playlistScreenshot)
+
 ## Contributing
 
 Please provide your email and/or Github username if you would like to contribute to this application.
