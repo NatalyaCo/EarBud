@@ -26,6 +26,7 @@ This fullstack application is in the very early stages of development. Our long 
 - Sequelize
 - Express-Session
 - Bootstrap
+- Spotify iFrame API
 - Handlebars
 - Heroku
 
