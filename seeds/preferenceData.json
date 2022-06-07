@@ -17,10 +17,42 @@
   },
   {
     "about_me": "EVERYTHING!",
-    "fave_genre": "Pop",
+    "fave_genre": "Techno",
     "fave_experience_style": "at a club!",
     "fave_decade": "1970-80's",
     "intentions": "people to catch a symphony or musical with.",
     "user_id": 3
+  },
+  {
+    "about_me": "EVERYTHING!",
+    "fave_genre": "Country",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
+    "user_id": 4
+  },
+  {
+    "about_me": "EVERYTHING!",
+    "fave_genre": "Pop",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
+    "user_id": 5
+  },
+  {
+    "about_me": "EVERYTHING!",
+    "fave_genre": "Classical",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
+    "user_id": 6
+  },
+  {
+    "about_me": "EVERYTHING!",
+    "fave_genre": "Indie",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
+    "user_id": 7
   }
 ]

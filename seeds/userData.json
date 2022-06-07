@@ -1,17 +1,44 @@
 [
   {
+    "id": 1,
     "name": "Shlomo",
     "email": "ssiegelman15@gmail.com",
-    "password": "password12345"
+    "password": "pass1234"
   },
   {
+    "id": 2,
     "name": "Lernantino",
     "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "password": "pass1234"
   },
   {
+    "id": 3,
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "password": "pass1234"
+  },
+  {
+    "id": 4,
+    "name": "Maeve",
+    "email": "maeve@gmail.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 5,
+    "name": "Judah",
+    "email": "judah@aol.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 6,
+    "name": "Natalya",
+    "email": "Natalya@gmail.com",
+    "password": "pass1234"
+  },
+  {
+    "id": 7,
+    "name": "Slevin",
+    "email": "slevin@aol.com",
+    "password": "pass1234"
   }
 ]
