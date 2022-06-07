@@ -1,10 +1,13 @@
-// module.exports = {
-//   format_date: (date) => {
-//     // Format date as MM/DD/YYYY
-//     return date.toLocaleDateString();
-//   },
+module.exports = {
+  format_date: (date) => {
+    // Format date as MM/DD/YYYY
+    return date.toLocaleDateString();
+  },
 
-//   //maybe throw in the cloudinary stuff into helper folder?
-// };
-
-// // helper for spotify artist
+  ifCond: function (v1, v2, options) {
+    if (v1 === v2) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
+  },
+};

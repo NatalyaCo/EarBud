@@ -1,0 +1,86 @@
+<div>
+  <h1 class='text-center mb-4'>
+    Here is your suggested playlist - we hope you enjoy!!
+  </h1>
+  <div id='spotify-player'>
+    {{#ifCond preference.fave_genre 'Rock'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+    {{#ifCond preference.fave_genre 'Rap'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DX186v583rmzp?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+    {{#ifCond preference.fave_genre 'Techno'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DXa8NOEUWPn9W?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+    {{#ifCond preference.fave_genre 'Country'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DXdxUH6sNtcDe?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+    {{#ifCond preference.fave_genre 'Pop'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+    {{#ifCond preference.fave_genre 'Classical'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DWVFeEut75IAL?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+    {{#ifCond preference.fave_genre 'Indie'}}
+      <iframe
+        style='border-radius:12px'
+        src='https://open.spotify.com/embed/playlist/37i9dQZF1DX2Nc3B70tvx0?utm_source=generator'
+        width='60%'
+        height='380'
+        frameBorder='0'
+        allowfullscreen=''
+        allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+      ></iframe>
+    {{/ifCond}}
+  </div>
+</div>
+
+<script src='./js/spotify.js'></script>
