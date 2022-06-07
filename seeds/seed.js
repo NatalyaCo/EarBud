@@ -12,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const preference = await Preferences.bulkCreate(preferenceData, {
+  const preferences = await Preferences.bulkCreate(preferenceData, {
     returning: true,
   });
 

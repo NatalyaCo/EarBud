@@ -141,7 +141,7 @@ h2 {
 }
 
 .top {
-  padding-left: 25px;
+  padding-left: 70px;
 }
 
 .button {
@@ -195,4 +195,32 @@ footer a.active {
 
 main {
   min-height: 550px;
+}
+
+.form {
+  max-width: 500px;
+}
+
+#upload_widget {
+  max-width: 500px;
+}
+
+#entry {
+  max-width: 500px;
+}
+
+section {
+  padding-left: 50px;
+}
+
+label {
+  padding-top: 20px;
+}
+
+.save_pref {
+  text-align: center;
+  width: 200px;
+  background-color: #1ed760;
+  color: white;
+  margin-left: 300px;
 }

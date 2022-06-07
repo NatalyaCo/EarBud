@@ -39,7 +39,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
     // Serialize user data
     const user = userData.get({ plain: true });
-    // console.log(user);
+    console.log(user);
 
     // Pass serialized data and session into dashboard template
     res.render('dashboard', {
@@ -74,27 +74,27 @@ router.get('/dashboard', withAuth, async (req, res) => {
 //   }
 // });
 
-router.get('/user/:id', withAuth, async (req, res) => {
-  try {
-    // Displays profile for user, but only if you are already matched/friends with
-    const userData = await User.findByPk(req.params.id, {
-      include: [
-        {
-          // Include relevent models that maybe store spotify data, friends, etc
-        },
-      ],
-    });
-    // Serialize user data
-    const user = userData.get({ plain: true });
-    // Pass serialized data and session into user template
-    res.render('user', {
-      ...user,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/user/:id', withAuth, async (req, res) => {
+//   try {
+//     // Displays profile for user, but only if you are already matched/friends with
+//     const userData = await User.findByPk(req.params.id, {
+//       include: [
+//         {
+//           // Include relevent models that maybe store spotify data, friends, etc
+//         },
+//       ],
+//     });
+//     // Serialize user data
+//     const user = userData.get({ plain: true });
+//     // Pass serialized data and session into user template
+//     res.render('user', {
+//       ...user,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/contact', async (req, res) => {
   res.render('contact', {

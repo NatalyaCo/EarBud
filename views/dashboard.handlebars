@@ -23,24 +23,23 @@
       <div class="flex-container">
         <div class="flex-child magenta">
           <div class="user-pic">
-            <img class="materialboxed" width="300" src="./images/headshot_generic_cute.jpg">
+            <img class="materialboxed" width="300" src="{{preference.profile_picture}}">
           </div>
-          <div class="flex-child">
+          <div class="flex-child text-center">
             <h3>
-              <p>Currently, my favorite artist is {{name}}</p>
+              {{name}}
             </h3>
-            <p>Checkout some of their top songs on Spotify</p>
           </div>
         </div>
         <div id="preferences">
           <div class="dash-text">
-            <h1>
-              <p>My name is {{name}}</p>
-            </h1>
-            <p>To me, music is {{preferences.about_me}}</p>
-            <p>I would like to meet {{preferences.intentions}}.</p>
-            <p>At this time, my favorite music genre is {{preferences.fave_genre}} from the {{preferences.fave_decade}} that
-              I would like to experience at {{preferences.fave_experience_style}}</p>
+            <p>
+              My name is {{name}}.
+            </p>
+            <p>To me, music is {{preference.about_me}}</p>
+            <p>I would like to meet {{preference.intentions}}.</p>
+            <p>At this time, my favorite music genre is {{preference.fave_genre}} from the {{preference.fave_decade}} that
+              I would like to experience {{preference.fave_experience_style}}</p>
             <p>Feel free to contact me with email at {{email}} and we can have a chat!</p>
           </div>
         </div>
@@ -48,6 +47,6 @@
     </div>
   </div>
 </body>
-<script src="/utils/helpers.js"></script>
+{{!-- <script src="/utils/helpers.js"></script> --}}
 
 </html>
