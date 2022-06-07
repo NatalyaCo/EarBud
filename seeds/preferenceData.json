@@ -1,26 +1,26 @@
 [
   {
-    "about_me": "My name is Shlomo",
+    "about_me": "EVERYTHING!",
     "fave_genre": "Rock",
-    "fave_experience_style": "Live",
-    "fave_decade": "90s",
-    "intentions": "make friends",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
     "user_id": 1
   },
   {
-    "about_me": "My name is Lerantino",
+    "about_me": "EVERYTHING!",
     "fave_genre": "Rap",
-    "fave_experience_style": "Home",
-    "fave_decade": "80s",
-    "intentions": "Party",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
     "user_id": 2
   },
   {
-    "about_me": "My name is Amiko",
+    "about_me": "EVERYTHING!",
     "fave_genre": "Pop",
-    "fave_experience_style": "Big Concerts",
-    "fave_decade": "50s",
-    "intentions": "Test",
+    "fave_experience_style": "at a club!",
+    "fave_decade": "1970-80's",
+    "intentions": "people to catch a symphony or musical with.",
     "user_id": 3
   }
 ]
