@@ -26,14 +26,20 @@ This fullstack application is in the very early stages of development. Our long 
 - Sequelize
 - Express-Session
 - Bootstrap
+- Spotify iFrame API
 - Handlebars
 - Heroku
 
 ## Usage
 
-Use the following link to visit our website: https://murmuring-hollows-86135.herokuapp.com/
+Use the following link to visit our website: https://safe-sea-62699.herokuapp.com/
 
 ## Screenshot
+
+![Screenshot of Login](./public/images/loginScreenshot)
+![Screenshot of Register](./public/images/registerScreenshot)
+![Screenshot of Dashboard](./public/images/dashboardScreenshot)
+![Screenshot of Playlist](./public/images/playlistScreenshot)
 
 ## Contributing
 
