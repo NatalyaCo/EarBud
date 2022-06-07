@@ -1,4 +1,5 @@
-var profile_picture;
+var profile_picture =
+  'https://res.cloudinary.com/dtpoyncyn/image/upload/v1654571476/Project_2/lck4qvn0tytrwmgz2bls.jpg';
 
 const submitFormHandler = async (event) => {
   event.preventDefault();
