@@ -34,7 +34,8 @@ Preferences.init(
     profile_picture: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: '>:>SD',
+      defaultValue:
+        'https://res.cloudinary.com/dtpoyncyn/image/upload/v1654571476/Project_2/lck4qvn0tytrwmgz2bls.jpg',
     },
     user_id: {
       type: DataTypes.INTEGER,
